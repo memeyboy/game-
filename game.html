@@ -1,0 +1,44 @@
+<!doctype html>
+
+<head>
+    <tilte> space invaders </tilte>
+
+</head>
+
+<body>
+    <canvas id="gameCanvas" width="500" height="500"></canvas>
+
+    <script>
+        var canvas, canvasContext;
+
+        window.onload = function() {
+            canvas = document.getElementById('gameCanvas');
+            canvasContext = canvas.getContext('2d');
+
+            setInterval(mainloop, 1000 / 50);
+
+
+
+
+        }
+
+        // player image import/ source 
+        var playerImg = new Image();
+        playerImg.src = 'Player.png';
+
+
+        function mainloop() { // loop runs code 50 times per second 
+            colorRect(0, 0, canvas.width, canvas.height, 'black'); //bg
+        }
+
+        function colorRect(x, y, w, h, c) {
+            canvasContext.fillStyle = c;
+            canvasContext.fillRect(x, y, w, h);
+
+
+
+
+        }
+
+    </script>
+</body>
